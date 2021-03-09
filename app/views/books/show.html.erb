@@ -1,12 +1,15 @@
 <%= render 'users/info', user: @book.user %>
 <%= render 'books/new', book: @booknew %>
 
-<h1>Book detail</h1>
-<tabel>
-  <tr>
+<h2>Book detail</h2>
+<table>
+  <tbody>
+    <tr>
     <td>
-      <%= attachment_image_tag @book.user, :profile_image , :fill, 30, 30, fallback: "no_image.jpg"%><br>
-      <%= link_to @book.user.name, user_path(@book.user) %>
+      <%= link_to user_path(@book.user) do %>
+        <%= attachment_image_tag @book.user, :profile_image , :fill, 40, 40, fallback: "no_image.jpg"%><br>
+        <%= @book.user.name %>
+      <% end %>
     </td>
     <td><%= link_to @book.title, book_path(@book) %></td>
     <td><%= @book.opinion %></td>
@@ -14,5 +17,6 @@
       <td><%=link_to"Edit",edit_book_path(@book)%></td>
       <td><%=link_to"Destroy",book_path(@book),method: :delete,"data-confirm"=>"本当に消しますか？"%></td>
     <% end %>
-  </tr>
+    </tr>
+  </tbody>
 </table>

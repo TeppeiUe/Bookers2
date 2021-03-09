@@ -1,5 +1,22 @@
 <h2>User info</h2>
-<p><%= attachment_image_tag user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg"%></p>
-<p>name:<%= user.name %></p>
-<p>introduction:<%= user.introduction %></p>
-<p><%= link_to "edit",edit_user_path(user) %></p>
+<%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%>
+<table>
+  <tbody>
+    <tr></tr>
+    <tr>
+      <th>name</th>
+      <th><%= user.name %></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <% if user == current_user %>
+    <%= link_to "edit",edit_user_path(user) %>
+  <% else %>
+    <%= link_to "edit",user_path(current_user) %>
+  <% end %>
+</div>
