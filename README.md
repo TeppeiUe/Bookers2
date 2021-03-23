@@ -1,24 +1,12 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# DMM WEBCAMP 課題：アプリケーションを作成してみようのフォルダです。
+アプリケーションを完成させよう2 8章【課題：アプリケーションを作成してみよう：応用編】
+## 機能
+ - CRUD
+ - 画像投稿機能
+ - ユーザー認証
+ - 各種フラッシュメッセージ
+ - バリデーションチェック
+ - 各種エラーメッセージ
+## 環境
+ - ruby 2.6.3
+ - rails 2.5.4.5
